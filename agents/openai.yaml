@@ -1,0 +1,4 @@
+interface:
+  display_name: "Taobao Shopping"
+  short_description: "淘宝可见低打扰慢速登录搜索加购辅助流程不下单不付款"
+  default_prompt: "Use $taobao-shopping to log in manually, search a Taobao product, and add an approved item to cart without checkout."
