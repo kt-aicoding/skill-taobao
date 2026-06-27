@@ -134,8 +134,8 @@ Use judgment for low-risk routine purchases so the user does not need to confirm
 
 Prefer conservative, broadly compatible defaults. Examples:
 
-- For iPhone 8-14 charging cables, choose USB-C to Lightning / C-L if the user has or implies a USB-C fast charger, prefer MFi-certified options, choose 1m, and pick a neutral color such as white when color is not important.
-- For unclear phone generations, connector direction, length, seller, bundle, warranty, or any option that materially changes price/use, ask before adding.
+- For common phone charging cables, choose the connector type implied by the user's device and charger, prefer certified options when relevant, choose a standard length such as 1m, and pick a neutral color when color is not important.
+- For unclear device generations, connector direction, length, seller, bundle, warranty, or any option that materially changes price/use, ask before adding.
 - If the selected SKU's final visible price is materially higher than the search result or user-stated price target, do not add it merely to complete the flow. Try one clearly equivalent low-risk SKU from the same product if visible; otherwise stop and report the price mismatch.
 - Do not auto-claim coupons or select limited-time purchase buttons when they change the flow toward checkout; using the normal `加入购物车` button is preferred.
 
