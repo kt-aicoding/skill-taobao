@@ -5,8 +5,10 @@
 ## 一句话安装
 
 ```bash
-mkdir -p "${CODEX_HOME:-$HOME/.codex}/skills" && git clone https://github.com/kt-aicoding/skill-taobao.git "${CODEX_HOME:-$HOME/.codex}/skills/taobao-shopping"
+target="${CODEX_HOME:-$HOME/.codex}/skills/taobao-shopping" && mkdir -p "$(dirname "$target")" && { [ -d "$target/.git" ] && git -C "$target" pull --ff-only || { rm -rf "$target" && git clone --depth 1 https://github.com/kt-aicoding/skill-taobao.git "$target"; }; }
 ```
+
+这条命令会安装或更新 `taobao-shopping` skill 目录，但不会读取或修改浏览器登录态、Cookie、订单、地址或支付信息。
 
 ## Skill 名称
 
@@ -68,6 +70,14 @@ python3 "${CODEX_HOME:-$HOME/.codex}/skills/.system/skill-creator/scripts/quick_
 ```text
 Skill is valid!
 ```
+
+验证 wrapper 是否会拒绝破坏性命令：
+
+```bash
+scripts/pw-taobao.sh close
+```
+
+预期会拒绝关闭浏览器。只有在用户明确要求清理会话时，才可以临时设置 `TAOBAO_ALLOW_DESTRUCTIVE=1`。
 
 ## 使用方式
 
